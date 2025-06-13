@@ -1,0 +1,6 @@
+- name: Test ServiceNow Inventory
+  hosts: all
+  gather_facts: false
+  tasks:
+    - debug:
+        msg: "Host {{ inventory_hostname }} is from ServiceNow."
