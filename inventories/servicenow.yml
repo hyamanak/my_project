@@ -1,4 +1,3 @@
-plugin: yaml
 all:
   hosts:
     test-host-1:
@@ -7,8 +6,3 @@ all:
     test-host-2:
       ansible_host: 192.168.100.2
       sn_sys_id: fake-sys-id-2
-  children:
-    servicenow_group:
-      hosts:
-        test-host-1:
-        test-host-2:
