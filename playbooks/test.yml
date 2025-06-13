@@ -1,6 +1,7 @@
-- name: Test ServiceNow Inventory
+- name: Test dummy ServiceNow inventory
   hosts: all
   gather_facts: false
   tasks:
-    - debug:
-        msg: "Host {{ inventory_hostname }} is from ServiceNow."
+    - name: Show fake host info
+      debug:
+        msg: "Host: {{ inventory_hostname }}, IP: {{ ansible_host }}, sys_id: {{ sn_sys_id }}"
